@@ -1,0 +1,78 @@
+/*   App    */
+.app{
+  position: relative;
+  width: 100%;
+  background-color: #282726;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/*   Header    */
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 1rem;
+  width: 100%;
+}
+.header>img{
+  width: 50px;
+}
+.header>h1{
+  color: #F9F4DA;
+  font-size: 25px;
+}
+
+/*   Main    */
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main>.instructions{
+  color: #8E8E8E;
+  width: 400px;
+  text-align: center;
+}
+.main>.game-status{
+  margin: 0;
+  padding: 0;
+  color: #F9F4DA;
+  width: 400px;
+  text-align: center;
+  h2,p{
+    margin: 0;
+    padding: 0;
+  }
+}
+.languages-status{
+  background-color: #7A5EA7;
+  border: 2px dashed darkmagenta;
+}
+.win-status, .languages-status, .lose-status{
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.win-status{
+  border: 2px dashed darkgreen;
+  background-color: #10A95B;
+}
+.lose-status{
+    border: 2px dashed darkred;
+    background-color: #BA2A2A;
+}
+
+/*   Footer    */
+.footer{
+  color:#F9F4DA;
+  text-align: center;
+  padding:1rem;
+}
+.footer>p{
+  margin: 0;
+}
+.footer>small{
+  margin: 0;
+}
