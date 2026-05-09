@@ -7,22 +7,26 @@
   overflow: hidden;
 }
 
+
 /*   Header    */
 .header{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  padding: 1rem;
+  padding: 1rem 0.5rem 0.5rem;
   width: 100%;
 }
 .header>img{
   width: 50px;
+  display: block;
 }
 .header>h1{
   color: #F9F4DA;
-  font-size: 25px;
+  font-size: 1.35rem;
+  margin: 0;
 }
+
 
 /*   Main    */
 .main{
@@ -33,14 +37,18 @@
 }
 .main>.instructions{
   color: #8E8E8E;
-  width: 400px;
+  width: 80%;
+  max-width: 400px;
   text-align: center;
 }
 .main>.game-status{
   margin: 0;
   padding: 0;
   color: #F9F4DA;
-  width: 400px;
+  width: 80%;
+  height: 60px;
+  max-width: 400px;
+  min-width: 350px;
   text-align: center;
   h2,p{
     margin: 0;
@@ -51,8 +59,12 @@
   background-color: #7A5EA7;
   border: 2px dashed darkmagenta;
 }
-.win-status, .languages-status, .lose-status{
-  padding: 1rem;
+.languages-status{
+  padding: 0.85rem;
+  border-radius: 0.5rem;
+}
+.win-status, .lose-status{
+  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 .win-status{
@@ -60,15 +72,75 @@
   background-color: #10A95B;
 }
 .lose-status{
-    border: 2px dashed darkred;
-    background-color: #BA2A2A;
+  border: 2px dashed darkred;
+  background-color: #BA2A2A;
+}
+.languages-display{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin: 25px;
+  width: 80%;
+}
+.lang-el{
+  margin: 0;
+  padding: 0.4rem;
+  border-radius: 0.25em;
+}
+.puzzle-word-display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 10px 0 5px;
+}
+.puzzle-el{
+  margin: 0;
+  padding: 0.4em 0.6em;
+  border-bottom: 0.1em solid #b6b3a2;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #F9F4DA;
+}
+.keyboard-keys-display{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 25px;
+  width: 80%;
+  max-width: 450px;
+  min-width: 370px;
+}
+.key-btn{
+  margin: 0;
+  padding: 0.5em 0.7em;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  border-radius: 0.25em;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+.key-btn:hover{
+  transform: scale(1.1);
+}
+.key-btn:active{
+  transform: scale(0.98);
 }
 
 /*   Footer    */
 .footer{
   color:#F9F4DA;
   text-align: center;
-  padding:1rem;
+  padding: 1rem 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1.05rem;
 }
 .footer>p{
   margin: 0;
