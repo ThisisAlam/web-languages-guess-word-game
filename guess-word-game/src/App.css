@@ -5,6 +5,7 @@
   background-color: #282726;
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: 0 0 20px black;
 }
 
 
@@ -60,8 +61,12 @@
   border: 2px dashed darkmagenta;
 }
 .languages-status{
-  padding: 0.85rem;
+  padding: 1rem;
   border-radius: 0.5rem;
+}
+.languages-status>p{
+  font-size: 1.125rem;
+  font-weight: bold;
 }
 .win-status, .lose-status{
   padding: 0.5rem;
@@ -84,10 +89,94 @@
   width: 80%;
 }
 .lang-el{
+  position: relative;
   margin: 0;
   padding: 0.4rem;
   border-radius: 0.25em;
 }
+
+/* Cross line */
+.dead-lang{
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgb(160, 19, 19);
+
+    opacity: 0.7;
+}
+
+/* Skull overlay */
+.dead-lang::after{
+    content: "💀";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 1.5rem;
+
+    filter: brightness(2);
+}
+.confetti-wrapper{
+    position: fixed;
+    inset: 0;
+
+    z-index: 2000;
+
+    pointer-events: none;
+}
+.stats-modal{
+    position: fixed;
+
+    top: 57%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    /* max-width: 400px; */
+
+    padding: 2rem;
+
+    border-radius: 1rem;
+
+    background: #1f1f1f;
+    color: white;
+
+    text-align: center;
+
+    border: 2px solid #444;
+
+    z-index: 1000;
+
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.stats-info{
+    margin: 1rem 0;
+}
+
+.stats-info p{
+    margin: 0.5rem 0;
+}
+
+.new-game-btn{
+    border: none;
+    margin: 0.5rem;
+    padding: 0.8rem 1.5rem;
+
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    background: #FCBA29;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
 .puzzle-word-display{
   display: flex;
   justify-content: center;
@@ -100,6 +189,8 @@
   padding: 0.4em 0.6em;
   border-bottom: 0.1em solid #b6b3a2;
   font-size: 1.25rem;
+  width: 2em;
+  height: 2em;
   font-weight: bold;
   text-transform: capitalize;
   color: #F9F4DA;
